@@ -1,9 +1,14 @@
 {
     "manifest_version": 2,
 
-    "name": "Chromescape Navigator",
-    "description": "Show the Netscape Navigator or Internet Explorer loading animation in Chrome",
-    "version": "1.2.0",
+    "name": "Throbback",
+    "description": "Show the Netscape Navigator or Internet Explorer loading animation in Firefox",
+    "version": "1.0",
+"browser_specific_settings": {
+  "gecko": {
+    "strict_min_version": "54.0a1"
+  }
+},
 
     "icons": {
         "16": "logo/logo16.png",
@@ -19,8 +24,10 @@
     "options_ui": {
         "page": "options/options.html"
     },
+
     "permissions": [
         "activeTab",
         "storage"
     ]
+	
 }
