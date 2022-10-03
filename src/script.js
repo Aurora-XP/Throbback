@@ -9,16 +9,30 @@ const DEFAULT_ICON = 'nn';
 const ICON_CONFIG = {
     nn: {
         directoryName: 'netscape',
-        totalFrames: 34,
-        frameRate: 130
+        totalFrames: 2,
+        frameRate: 50,
     },
     ie: {
         directoryName: 'explorer',
-        totalFrames: 43,
-        frameRate: 150
-    }
+        totalFrames: 2,
+        frameRate: 50,
+    },
+	ws: {
+		directoryName: 'winsimple',
+        totalFrames: 2,
+        frameRate: 50,
+    },
+	xp: {
+		directoryName: 'winxp',
+        totalFrames: 2,
+        frameRate: 50,
+	},
+	w10: {
+	directoryName: 'win10',
+    totalFrames: 2,
+    frameRate: 50,
+	},
 }
-
 var currentStatus = '';
 var currentFrame = 0;
 var currentTabs = {}
@@ -101,7 +115,7 @@ function startLoading() {
             if (currentStatus === LOADING_STATUS) {
                 var newFrame = (currentFrame + 1) % config.totalFrames;
                 setIconImage(newFrame);
-                currentFrame = newFrame;
+                currentFrame === newFrame;
             } else {
                 clearInterval(interval);
                 interval = undefined;
